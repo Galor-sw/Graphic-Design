@@ -1,0 +1,25 @@
+var canvas = document.getElementById('my-canvas');
+var context = canvas.getContext('2d');
+const colors = ['red', 'green', 'pink', 'black']
+
+
+
+function drawPixel(context, x, y, color) {
+    var roundedX = Math.round(x);
+    var roundedY = Math.round(y);
+
+    context.beginPath();
+    context.fillStyle = color || '#000';
+    context.fillRect(roundedX, roundedY, 1, 1);
+    context.fill();
+}
+
+
+// for (var i = 0; i < 1; i++) {
+//     let randX = (Math.random() * 500);
+//     let randY = (Math.random() * 500);
+//     let randColor = Math.round((Math.random() * 3));
+
+
+//     drawPixel(context, randX, randY, colors[randColor]);
+// }
